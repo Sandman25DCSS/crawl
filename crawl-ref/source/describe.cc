@@ -1101,8 +1101,10 @@ static string _describe_weapon(const item_def &item, bool verbose)
         if (is_unrandom_artefact(item)
             && item.unrand_idx == UNRAND_WARLOCK_MIRROR)
         {
-            int reflect_chance = 100 * player_shield_class() / (player_shield_class() + 40);
-            description += "\n\nThe shield has " + to_string(reflect_chance) + "% chance to reflect enchantments.";
+            int reflect_chance = 100 * player_shield_class() /
+            (player_shield_class() + 40);
+            description += "\n\nThis shield has a " + to_string(reflect_chance) + 
+            "% chance to reflect enchantments.";
         }
 
         // XXX: Can't happen, right?
